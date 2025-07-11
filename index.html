@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Todo List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>My Todo List</h1>
+        
+        <div class="form">
+            <input type="text" id="task-input" placeholder="task name">
+            <input type="date" id="date-input">
+            <button id="add-button">Add Task</button>
+        </div>
+
+        <div class="filter">
+            <button onclick="filterTodos('all')">All</button>
+            <button onclick="filterTodos('completed')">Complete</button>
+            <button onclick="filterTodos('pending')">Pending</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Due</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="todo-list">
+                <!--List Item-->
+            </tbody>
+        </table>
+
+        <button onclick="clearAll()">Clear All</button>
+    </div>
+
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
